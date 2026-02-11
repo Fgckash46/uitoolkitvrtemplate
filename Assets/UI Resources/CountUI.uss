@@ -1,0 +1,59 @@
+:root {
+}
+/* 背景と中央揃え */
+.container {
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f172a; /* 深いネイビー */
+}
+
+/* グラスモーフィズム・カード */
+.card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 40px;
+    align-items: center;
+    min-width: 300px;
+}
+
+/* タイトルラベル */
+.label-title {
+    color: #94a3b8;
+    font-size: 14px;
+    letter-spacing: 2px;
+    -unity-font-style: bold;
+}
+
+/* カウント数字 */
+.label-count {
+    color: white;
+    font-size: 80px;
+    -unity-font-style: bold;
+    margin: 20px 0;
+}
+
+/* モダンなグラデーションボタン */
+.modern-button {
+    background-color: #6366f1; /* インディゴ */
+    color: white;
+    border-radius: 12px;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-width: 0;
+    transition-duration: 0.2s;
+    width: 100%;
+}
+
+/* ホバー・アクティブ演出 */
+.modern-button:hover {
+    background-color: #818cf8;
+    scale: 1.05;
+}
+
+.modern-button:active {
+    background-color: #4f46e5;
+    scale: 0.95;
+}

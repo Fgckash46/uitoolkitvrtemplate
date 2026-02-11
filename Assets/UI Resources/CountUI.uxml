@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEngine.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Resources/CountUI.uss?fileID=7433441132597879392&amp;guid=9bd3b7f39eda94349b2376942a0fcd08&amp;type=3#CountUI"/>
+    <ui:VisualElement class="container">
+        <ui:VisualElement class="card">
+            <ui:Label text="SCORE" class="label-title"/>
+            <ui:Label text="0" name="counter-label" class="label-count"/>
+            <ui:Button text="PUSH ME" name="count-button" class="modern-button"/>
+            <ui:Button text="RESET" name="reset-button" class="modern-button"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

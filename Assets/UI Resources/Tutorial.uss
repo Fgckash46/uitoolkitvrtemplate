@@ -1,0 +1,44 @@
+.tutorial-root {
+    flex-grow: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.tutorial-card {
+    width: 400px;
+    background-color: #2d2d2d;
+    border-radius: 20px;
+    padding: 20px;
+    align-items: center;
+}
+
+.image-style {
+    width: 300px;
+    height: 200px;
+    background-color: #444; /* ここに画像が表示される */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.desc-style {
+    color: white;
+    font-size: 18px;
+    white-space: normal; /* 折り返し有効 */
+    margin-bottom: 30px;
+    -unity-text-align: middle-center;
+}
+
+.nav-container {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.next-btn {
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: #007bff;
+    color: white;
+}

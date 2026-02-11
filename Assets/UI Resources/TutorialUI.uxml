@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEngine.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Resources/Tutorial.uss?fileID=7433441132597879392&amp;guid=cb9fe4ce8983f64458a8e1bfe23fd64d&amp;type=3#Tutorial"/>
+    <ui:VisualElement class="tutorial-root">
+        <ui:VisualElement class="tutorial-card">
+            <ui:VisualElement name="image-holder" class="image-style"/>
+            <ui:Label name="desc-label" text="説明文がここに入ります" class="desc-style"/>
+            <ui:VisualElement class="nav-container">
+                <ui:Label name="page-indicator" text="1 / 5" class="page-num"/>
+                <ui:Button name="next-button" text="次へ" class="next-btn"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

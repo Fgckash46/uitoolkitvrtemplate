@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc30fad067af0804c8fa1df931c44322, type: 3}
+  m_Name: TurorialList
+  m_EditorClassIdentifier: Assembly-CSharp::TutorialSequence
+  pages:
+  - {fileID: 11400000, guid: c45f1a9c11467bc4a80003701d23a9ea, type: 2}
+  - {fileID: 11400000, guid: 8d706a5bfcd74f74dbeeb9a4f7a0d7e9, type: 2}
+  - {fileID: 11400000, guid: 085a2cee83e3d9a4cb1d551736efd011, type: 2}
+  - {fileID: 11400000, guid: 2e6cf6e012499dc4db1fddb902275b22, type: 2}
+  - {fileID: 11400000, guid: d75d37a12ccbc6c43870f0da6afd9c7b, type: 2}
