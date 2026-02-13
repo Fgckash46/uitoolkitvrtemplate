@@ -8,6 +8,10 @@ public class CountUIView : MonoBehaviour
     public Subject<int> OnButtonClicked = new Subject<int>();
     public Subject<int> OnResetClicked = new Subject<int>();
 
+    public Subject<int> OnConfirmClicked = new Subject<int>();
+
+    public Subject<int> OnCancelClicked = new Subject<int>();
+
     private Label label;
     void Awake()
     {
@@ -17,13 +21,29 @@ public class CountUIView : MonoBehaviour
         this.label = root.Q<Label>("counter-label");
         var countButton = root.Q<Button>("count-button");
         var resetButton = root.Q<Button>("reset-button");
+        var confirmButton = root.Q<Button>("dialog-confirm");
+        var cancelButton = root.Q<Button>("dialog-cancel");
+        var _overlay = root.Q<VisualElement>("dialog-overlay");
 
         countButton.clicked += () => {
             OnButtonClicked.OnNext(1);
         };
 
         resetButton.clicked += () => {
+            _overlay.RemoveFromClassList("hidden");
+            _overlay.style.display = DisplayStyle.Flex;
+        };
+
+        confirmButton.clicked += () => {
+            _overlay.AddToClassList("hidden");
+            _overlay.schedule.Execute(() => _overlay.style.display = DisplayStyle.None).StartingIn(200);
             OnResetClicked.OnNext(1);
+            
+        };
+
+        cancelButton.clicked += () => {
+            _overlay.AddToClassList("hidden");
+            _overlay.schedule.Execute(() => _overlay.style.display = DisplayStyle.None).StartingIn(200);
         };
     }
 

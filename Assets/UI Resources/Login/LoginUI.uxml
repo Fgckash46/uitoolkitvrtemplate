@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Resources/Login/LoginUI.uss?fileID=7433441132597879392&amp;guid=9b892c352e118434fbc00544dc8234fe&amp;type=3#LoginUI"/>
+    <ui:VisualElement name="background" class="bg-container">
+        <ui:VisualElement name="login-card" class="glass-panel">
+            <ui:Label text="Gemini AI Login" class="title"/>
+            <ui:TextField label="API Key" name="api-key-input" password="true" class="input-field"/>
+            <ui:Button text="Authorize" name="login-button" class="primary-button"/>
+            <ui:Label text="Status: Ready" name="status-label" class="status-text"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

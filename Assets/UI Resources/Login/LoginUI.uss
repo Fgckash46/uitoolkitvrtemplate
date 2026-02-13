@@ -1,0 +1,49 @@
+/* 背景全体：濃い紺色のグラデーションなどを想定 */
+.bg-container {
+    flex-grow: 1;
+    background-color: #0F172A; /* 深い紺色 */
+    align-items: center;
+    justify-content: center;
+}
+
+/* ガラスパネル：半透明＋白枠＋影 */
+.glass-panel {
+    width: 350px;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.08); /* 非常に薄い白 */
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.2); /* 境界線をうっすら白く */
+    border-radius: 16px;
+    
+    /* ガラスの質感を出すための設定 */
+    backdrop-filter: blur(10px); /* Unityのバージョンにより反映されない場合はマテリアルで補完 */
+}
+
+/* タイトル：Sharpなイメージのフォント設定 */
+.title {
+    font-size: 24px;
+    color: white;
+    -unity-font-style: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* 入力フィールド */
+.input-field {
+    margin-bottom: 15px;
+    color: white;
+}
+
+/* ボタン：青ベースのクリーンなデザイン */
+.primary-button {
+    background-color: #3B82F6;
+    color: white;
+    border-radius: 8px;
+    height: 40px;
+    border-width: 0;
+    transition-duration: 0.2s;
+}
+
+.primary-button:hover {
+    background-color: #2563EB;
+}

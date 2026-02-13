@@ -11,6 +11,7 @@
 /[Mm]emoryCaptures/
 /[Uu]ser[Ss]ettings/
 
+
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
 
@@ -87,6 +88,9 @@ When I look at the "official" Unity gitignore, this is what it looks like :
 # Visual Studio cache directory
 .vs/
 
+# Visual Studio Code cache directory
+.vscode/
+
 # Gradle cache directory
 .gradle/
 
@@ -122,3 +126,24 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+
+#MyProject
+/Assets/Firebase/
+/Assets/Firebase.meta
+/Assets/google-services.json*
+/ProjectSettings/GvhProjectSettings.xml
+/Assets/Scripts/Firebase*
+/Assets/Scripts/Firebase*.meta
+/Assets/Editor Default Resources/
+/Assets/Editor Default Resources.meta
+/Assets/ExternalDependencyManager/
+/Assets/ExternalDependencyManager.meta
+
+#MyProject
+/Assets/Plugins/
+/Assets/Plugins.meta
+/Assets/StreamingAssets/
+/Assets/StreamingAssets.meta
+/Assets/Plugins.meta
+/Assets/Samples/
+/Assets/Samples.meta

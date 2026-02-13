@@ -1,59 +1,126 @@
 :root {
+    /* シャープ・レッドと家電らしい配色 */
+    --sharp-red: #E60012;
+    --sharp-red-hover: #B3000E;
+    --sharp-red-active: #80000A;
+    --bg-light: #F4F4F4;
+    --card-white: #FFFFFF;
+    --border-gray: #D1D1D1;
+    --text-black: #333333;
+    --text-muted: #666666;
+    --shadow-soft: rgba(0, 0, 0, 0.1);
+
+    --bg-gradient-start: #e2e8f0;
+    --bg-gradient-end: #ffffff;
+    --glass-bg: rgba(255, 255, 255, 0.6);
+    --glass-border: rgba(255, 255, 255, 0.8);
 }
-/* 背景と中央揃え */
+
+/* 背景: 明るいグレーで清潔感を出す */
 .container {
     flex-grow: 1;
     justify-content: center;
     align-items: center;
-    background-color: #0f172a; /* 深いネイビー */
+    background-color: var(--bg-gradient-start);
 }
 
-/* グラスモーフィズム・カード */
-.card {
-    background-color: rgba(255, 255, 255, 0.05);
+/* カード: 透過をやめ、白背景に薄い影をつけて実在感を出す */
+.card, .dialog-card {
+    background-color: var(--card-white);
     border-width: 1px;
-    border-color: rgba(255, 255, 255, 0.1);
-    border-radius: 24px;
-    padding: 40px;
+    border-color: var(--border-gray);
+    border-radius: 8px; /* 角丸を控えめに */
+    padding: 32px;
     align-items: center;
-    min-width: 300px;
+    /* 家電の操作パネル風の影 */
+    border-bottom-width: 3px; 
 }
 
-/* タイトルラベル */
+.card {
+    min-width: 320px;
+}
+
+/* ラベル: 液晶表示のような視認性 */
 .label-title {
-    color: #94a3b8;
-    font-size: 14px;
-    letter-spacing: 2px;
+    color: var(--sharp-red); /* タイトルに赤を使いアクセントに */
+    font-size: 13px;
+    letter-spacing: 1px;
     -unity-font-style: bold;
+    margin-bottom: 8px;
 }
 
-/* カウント数字 */
 .label-count {
-    color: white;
-    font-size: 80px;
+    color: var(--text-black);
+    font-size: 72px;
     -unity-font-style: bold;
-    margin: 20px 0;
+    margin: 16px 0;
 }
 
-/* モダンなグラデーションボタン */
+/* ボタン: 信頼感のあるソリッドな赤ボタン */
 .modern-button {
-    background-color: #6366f1; /* インディゴ */
+    background-color: var(--sharp-red);
     color: white;
-    border-radius: 12px;
-    padding: 12px 30px;
-    font-size: 18px;
+    border-radius: 4px; /* よりシャープな角 */
+    padding: 14px 24px;
+    font-size: 16px;
     border-width: 0;
-    transition-duration: 0.2s;
+    transition-duration: 0.1s;
     width: 100%;
+    margin-top: 12px;
+    -unity-font-style: bold;
 }
 
-/* ホバー・アクティブ演出 */
 .modern-button:hover {
-    background-color: #818cf8;
-    scale: 1.05;
+    background-color: var(--sharp-red-hover);
+    scale: 1.0; /* 浮ついた動きは抑える */
 }
 
 .modern-button:active {
-    background-color: #4f46e5;
-    scale: 0.95;
+    background-color: var(--sharp-red-active);
+    border-top-width: 2px; /* 押し込んだような視覚効果 */
+}
+
+/* --- ダイアログ（オーバーレイ） --- */
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 遮断しすぎない黒 */
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.dialog-text {
+    color: var(--text-black);
+    font-size: 18px;
+    margin-bottom: 24px;
+    -unity-text-align: middle-center;
+}
+
+.dialog-button-row {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* 戻るボタン: 控えめなグレー */
+.btn-cancel {
+    background-color: #999999;
+    width: 45%;
+}
+
+.btn-cancel:hover {
+    background-color: #777777;
+}
+
+/* 実行ボタン（リセット） */
+.btn-danger {
+    background-color: var(--sharp-red);
+    width: 45%;
 }
