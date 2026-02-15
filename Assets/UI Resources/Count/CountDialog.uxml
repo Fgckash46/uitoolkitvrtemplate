@@ -1,0 +1,12 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Resources/Count/CountDialog.uss?fileID=7433441132597879392&amp;guid=ff71f33f366fb974e933834d7ea25580&amp;type=3#CountDialog"/>
+    <ui:VisualElement name="dialog-overlay" class="overlay">
+        <ui:VisualElement class="dialog-card">
+            <ui:Label text="本当にリセットしますか？" class="dialog-text"/>
+            <ui:VisualElement class="dialog-buttons">
+                <ui:Button text="キャンセル" name="dialog-cancel" class="dialog-btn"/>
+                <ui:Button text="リセット" name="dialog-confirm" class="dialog-btn danger"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

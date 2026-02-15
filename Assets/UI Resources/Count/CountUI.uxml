@@ -1,5 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEngine.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI%20Resources/CountUI.uss?fileID=7433441132597879392&amp;guid=9bd3b7f39eda94349b2376942a0fcd08&amp;type=3#CountUI"/>
+    <ui:Template name="CountDialog" src="project://database/Assets/UI%20Resources/Count/CountDialog.uxml?fileID=9197481963319205126&amp;guid=26788974035319e4f8fbfa562c901599&amp;type=3#CountDialog"/>
+    <Style src="project://database/Assets/UI%20Resources/Count/CountUI.uss?fileID=7433441132597879392&amp;guid=9bd3b7f39eda94349b2376942a0fcd08&amp;type=3#CountUI"/>
     <ui:VisualElement class="container">
         <ui:VisualElement class="card">
             <ui:Label text="SCORE" class="label-title"/>
@@ -8,14 +9,5 @@
             <ui:Button text="RESET" name="reset-button" class="modern-button"/>
         </ui:VisualElement>
     </ui:VisualElement>
-    
-    <ui:VisualElement name="dialog-overlay" class="overlay hidden">
-        <ui:VisualElement class="dialog-card">
-            <ui:Label text="本当にリセットしますか？" class="dialog-text"/>
-            <ui:VisualElement class="dialog-buttons">
-                <ui:Button text="キャンセル" name="dialog-cancel" class="dialog-btn"/>
-                <ui:Button text="リセット" name="dialog-confirm" class="dialog-btn danger"/>
-            </ui:VisualElement>
-        </ui:VisualElement>
-    </ui:VisualElement>
+    <ui:Instance template="CountDialog" name="reset-confirm" class="dialog-instance"/>
 </ui:UXML>
