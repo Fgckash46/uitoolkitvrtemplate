@@ -31,7 +31,6 @@
 }
 
 .tab-button--selected {
-
 }
 
 .tutorial-card {
@@ -43,7 +42,18 @@
     height: 300px;
 }
 
-.unity-button {
+.tab-btn {
+    background-color: rgb(50, 50, 50);
+    color: white;
+    border-radius: 20px;
+    border-width: 1px;
+    border-color: rgb(122, 102, 255);
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.chip-btn {
     background-color: rgb(50, 50, 50);
     color: white;
     border-radius: 20px;
@@ -65,7 +75,6 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
-
 
 .play-button {
     background-color: rgb(255, 255, 255);
@@ -100,20 +109,16 @@
     -unity-font-style: bold;
 }
 
-
-/* グループ全体のレイアウト */
 .button-group {
     flex-direction: row;
 }
 
-/* ラジオボタン全体の基本スタイル */
 .chip-radio {
     margin: 5px;
     align-items: center;
     justify-content: center;
 }
 
-/* 内部の「○」ボタン部分を消して、ボタンの土台にする */
 .chip-radio .unity-radio-button__input {
     background-color: rgb(50, 50, 50);
     border-radius: 20px;
@@ -125,26 +130,21 @@
     align-items: center;
 }
 
-/* チェックマーク（○の中身）を完全に非表示にする */
 .chip-radio .unity-radio-button__checkmark-background,
 .chip-radio .unity-radio-button__checkmark {
     display: none;
 }
 
-/* テキストのスタイル */
 .chip-radio .unity-radio-button__label {
     z-index: 1;
-    position: absolute; /* 土台の上に重ねる */
+    position: absolute;
     color: white;
     -unity-font-style: bold;
     margin: 0;
     padding: 0;
-    pointer-events: none; /* クリックを邪魔しない */
+    pointer-events: none;
 }
 
-/* ------------------------------------------- */
-/* 選択中（Checked）の状態：元の .active に相当 */
-/* ------------------------------------------- */
 .chip-radio:checked .unity-radio-button__input {
     z-index: 0;
     background-color: rgb(79, 54, 245);
@@ -152,7 +152,6 @@
     border-bottom-color: rgb(255, 255, 255);
 }
 
-/* ホバー時の演出（お好みで） */
 .chip-radio .unity-radio-button__input:hover {
     background-color: rgb(70, 70, 70);
 }
@@ -168,4 +167,7 @@
 
 .unity-radio-button-group__container {
     flex-direction: row;
+}
+
+.tab-btn {
 }

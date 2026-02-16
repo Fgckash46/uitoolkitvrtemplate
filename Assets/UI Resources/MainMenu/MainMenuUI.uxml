@@ -1,7 +1,7 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI%20Resources/MainMenu/MainMenuUI.uss?fileID=7433441132597879392&amp;guid=47f555954a88a8a49b216c40a2189562&amp;type=3#MainMenuUI"/>
-    <ui:VisualElement class="menu-container">
-        <ui:VisualElement class="tab-header" style="flex-direction: row;">
+    <ui:VisualElement class="menu-container" style="padding-bottom: 40px;">
+        <ui:VisualElement class="tab-header" style="flex-direction: row; padding-bottom: 0;">
             <ui:Button text="CAMPAIGN" class="tab-btn active tab-button--selected"/>
             <ui:Button text="ENDLESS" class="tab-btn"/>
             <ui:Button text="MULTIPLAYER" class="tab-btn"/>
