@@ -165,3 +165,7 @@
 #choicesContentContainer {
     flex-direction: row;
 }
+
+.unity-radio-button-group__container {
+    flex-direction: row;
+}
