@@ -1,0 +1,167 @@
+.menu-container {
+    background-color: rgb(13, 11, 29);
+    padding: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-panel {
+    background-color: rgba(25, 23, 45, 0.8);
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 30px;
+    width: 900px;
+}
+
+.tab-header {
+    background-color: rgba(25, 23, 45, 0.8);
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 30px;
+    width: 900px;
+    align-self: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-direction: row;
+    align-items: center;
+    flex-grow: 0;
+    justify-content: space-evenly;
+}
+
+.tab-button--selected {
+
+}
+
+.tutorial-card {
+    background-image: url("your-image-path");
+    -unity-background-scale-mode: scale-and-crop;
+    border-radius: 16px;
+    padding: 24px;
+    width: 50%;
+    height: 300px;
+}
+
+.unity-button {
+    background-color: rgb(50, 50, 50);
+    color: white;
+    border-radius: 20px;
+    border-width: 1px;
+    border-color: rgb(122, 102, 255);
+}
+
+.active {
+    background-color: rgb(79, 54, 245);
+    color: white;
+    border-radius: 20px;
+    border-width: 1px;
+    border-color: rgb(122, 102, 255);
+    border-bottom-width: 3px;
+    border-bottom-color: rgb(255, 255, 255);
+}
+
+.button-group {
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+.play-button {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-size: 24px;
+    border-radius: 20px;
+    height: 60px;
+    margin-top: 20px;
+    letter-spacing: 5px;
+    -unity-font-style: bold;
+}
+
+.start-session-btn {
+    background-color: rgb(79, 54, 245);
+    color: white;
+    font-size: 24px;
+    border-radius: 20px;
+    height: 60px;
+    margin-top: 20px;
+    letter-spacing: 5px;
+    -unity-font-style: bold;
+}
+
+.start-session-btn:hover {
+    background-color: rgb(98, 73, 255);
+}
+
+.section-label {
+    color: rgb(107, 107, 131);
+    font-size: 12px;
+    margin-bottom: 8px;
+    -unity-font-style: bold;
+}
+
+
+/* グループ全体のレイアウト */
+.button-group {
+    flex-direction: row;
+}
+
+/* ラジオボタン全体の基本スタイル */
+.chip-radio {
+    margin: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 内部の「○」ボタン部分を消して、ボタンの土台にする */
+.chip-radio .unity-radio-button__input {
+    background-color: rgb(50, 50, 50);
+    border-radius: 20px;
+    border-width: 1px;
+    border-color: rgb(122, 102, 255);
+    min-width: 100px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* チェックマーク（○の中身）を完全に非表示にする */
+.chip-radio .unity-radio-button__checkmark-background,
+.chip-radio .unity-radio-button__checkmark {
+    display: none;
+}
+
+/* テキストのスタイル */
+.chip-radio .unity-radio-button__label {
+    z-index: 1;
+    position: absolute; /* 土台の上に重ねる */
+    color: white;
+    -unity-font-style: bold;
+    margin: 0;
+    padding: 0;
+    pointer-events: none; /* クリックを邪魔しない */
+}
+
+/* ------------------------------------------- */
+/* 選択中（Checked）の状態：元の .active に相当 */
+/* ------------------------------------------- */
+.chip-radio:checked .unity-radio-button__input {
+    z-index: 0;
+    background-color: rgb(79, 54, 245);
+    border-bottom-width: 3px;
+    border-bottom-color: rgb(255, 255, 255);
+}
+
+/* ホバー時の演出（お好みで） */
+.chip-radio .unity-radio-button__input:hover {
+    background-color: rgb(70, 70, 70);
+}
+
+.horizontal-group {
+    flex-direction: row;
+    justify-content: center;
+}
+
+#choicesContentContainer {
+    flex-direction: row;
+}
